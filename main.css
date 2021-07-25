@@ -197,14 +197,14 @@ ol {
     text-transform: capitalize;
 }
 #image-container {
-    width: 60vh;
+    width: 20vh;
     margin: auto;
     overflow: hidden;
 }
 #image-slider {
     display: flex;
     width: 100%;
-    height: 75vh;
+    height: 25vh;
     transition: 0.5s ease-in-out;
     transform: translateX(0);
 }
