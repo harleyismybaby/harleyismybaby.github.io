@@ -190,3 +190,30 @@ ol {
 #goth {
     color: black;
 }
+#wannabe-title {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+    text-transform: capitalize;
+}
+#image-container {
+    width: 60vh;
+    margin: auto;
+    overflow: hidden;
+}
+#image-slider {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    transition: 0.5s ease-in-out;
+    transform: translateX(0);
+}
+.radio-input {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons {
+    margin: 10px;
+}
