@@ -241,7 +241,7 @@ ol {
 #todo-container {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 100%;
     margin: auto;
     background-color: rgba(242,241,211,0.3);
     justify-content: center;
@@ -251,7 +251,7 @@ ol {
     align-self: center;
 }
 #todo-container input[type="checkbox"] {
-    appearance: none;
+    -webkit-appearance: none;
 }
 #todo-container i{
     display: inline-block;
