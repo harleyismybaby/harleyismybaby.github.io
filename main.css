@@ -7,6 +7,9 @@
     font-family: 'Aclonica';
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+}
 body {
     background-color: #F2BBC5;
     background-image: url(images/carebear\ background.png);
@@ -88,13 +91,13 @@ main {
     justify-content: center;
     align-items: center;
     margin: 8px;
-    text-transform: capitalize;
     }
-#title2 h1 {
+h1 {
     font-size: 30px;
     width: 16ch;
     letter-spacing: 3px;
     text-align: center;
+    text-transform: capitalize;
 }
 #figure1 {
     display: flex;
@@ -220,11 +223,82 @@ ol {
 .buttons {
     margin: 10px;
 }
-.container {
-    max-width: 60vh;
+.container-contain {
+    width: 50vh;
     margin: auto;
+}
+.container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 50vh 50vh;
+    grid-template-rows: auto auto;
+    grid-gap: 50px;
 }
 .container-img {
     width: 100%;
     object-fit: scale-down;
+}
+#todo-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    background-color: rgba(242,241,211,0.3);
+    justify-content: center;
+    align-items: flex-start;
+}
+#todo-title {
+    align-self: center;
+}
+#todo-container input[type="checkbox"] {
+    appearance: none;
+}
+#todo-container i{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #7796A6;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+}
+#todo-container input[type="checkbox"]:checked ~ i{
+    width: 10px;
+    height: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid #7796A6;
+    border-bottom: 2px solid #7796A6;
+    border-radius: 0;
+    transform: rotate(405deg);
+    transform-origin: 150% 90%;
+}
+#todo-container p{
+    position: relative;
+    left: 40px;
+    font-size: 20px;
+    display: inline-block;
+}
+#todo-container label {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#todo-container p::before {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #7796A6;
+    transform: translateY(-50%);
+}
+#todo-container input[type="checkbox"]:checked ~ p::before {
+    width: 100%;
+    transition: 0.5s linear;
+}
+#todo-container input[type="checkbox"]:checked ~ p {
+    color: white;
+    transition: 0.5s;
 }
